@@ -1,6 +1,30 @@
 {
     "cargaisons": [
         {
+            "idcargo": "66549ba56106f",
+            "numero": "CRG507",
+            "poids_max": "690",
+            "prix_total": "6900",
+            "lieu_depart": "Madagascar",
+            "lieu_arrivee": "Inde",
+            "distance_km": "4874.11",
+            "type": "Maritime",
+            "etat_avancement": "en attente",
+            "etat_globale": "ouvert"
+        },
+        {
+            "idcargo": "665495e67e430",
+            "numero": "CRG546",
+            "poids_max": "120",
+            "prix_total": "1200",
+            "lieu_depart": "Madagascar",
+            "lieu_arrivee": "Madagascar",
+            "distance_km": "208.30",
+            "type": "Routi\u00e8re",
+            "etat_avancement": "en attente",
+            "etat_globale": "ouvert"
+        },
+        {
             "idcargo": 1,
             "numero": "CRG001",
             "poids_max": 5000,
@@ -81,6 +105,42 @@
             "lieu_arrivee": "Inde",
             "distance_km": "6237.90",
             "type": "Maritime",
+            "etat_avancement": "en attente",
+            "etat_globale": "ouvert"
+        },
+        {
+            "idcargo": "66548d005ea90",
+            "numero": "CRG46",
+            "poids_max": "76",
+            "prix_total": "760",
+            "lieu_depart": "Zambie",
+            "lieu_arrivee": "Inde",
+            "distance_km": "6596.52",
+            "type": "Maritime",
+            "etat_avancement": "en attente",
+            "etat_globale": "ouvert"
+        },
+        {
+            "idcargo": "66548e0081ab8",
+            "numero": "CRG718",
+            "poids_max": "89",
+            "prix_total": "890",
+            "lieu_depart": "Mauritanie",
+            "lieu_arrivee": "Russie",
+            "distance_km": "10335.31",
+            "type": "Maritime",
+            "etat_avancement": "en attente",
+            "etat_globale": "ouvert"
+        },
+        {
+            "idcargo": "66549036551e9",
+            "numero": "CRG185",
+            "poids_max": "100",
+            "prix_total": "1000",
+            "lieu_depart": "Guin\u00e9e",
+            "lieu_arrivee": "\u00c9gypte",
+            "distance_km": "4292.93",
+            "type": "Routi\u00e8re",
             "etat_avancement": "en attente",
             "etat_globale": "ouvert"
         }

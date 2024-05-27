@@ -33,7 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         ];
 
         $data = readJSON('cargaisons.json');
-        $data['cargaisons'][] = $newCargaison;
+        // $data['cargaisons'][] = $newCargaison;
+        array_unshift($data['cargaisons'], $newCargaison);
         writeJSON('cargaisons.json', $data);
 
         echo json_encode(["status" => "success", "message" => "Cargaison ajoutée avec succès"]);

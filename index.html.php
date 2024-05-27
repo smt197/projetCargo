@@ -237,7 +237,7 @@
                         <option value="poids">poids</option>
                         <option value="nombre">nombre</option>
                     </select>
-                    <span class="text-red-500 text-sm hidden" id="type-plein-error">Type de cargaison est obligatoire</span>
+                    <span class="text-red-500 text-sm hidden" id="type-plein-error">Type de plein est obligatoire</span>
                 </div>
                 <div class="mb-4">
                     <div mt-1 block w-full p-2 border-gray-300 rounded id="map" style="width: 100%; height: 100px;"></div>
@@ -268,14 +268,14 @@
                         Arrivee</label>
                     <input type="text" id="arrivee"
                         class="mt-1 block w-full p-2 border border-gray-300 rounded" min="1" max="10">
-                        <span class="text-red-500 text-sm hidden" id="arrivee-error">Lieu depart obligatoire</span>
+                        <span class="text-red-500 text-sm hidden" id="arrivee-error">Lieu arrivee obligatoire</span>
                 </div>
                 <div class="mb-4">
                     <label for="distance" class="block text-sm font-medium text-gray-700">
                         Distance</label>
                     <input type="text" id="distance"
                         class="mt-1 block w-full p-2 border border-gray-300 rounded" min="1" max="10">
-                        <span class="text-red-500 text-sm hidden" id="distance-error">Lieu depart obligatoire</span>
+                        <span class="text-red-500 text-sm hidden" id="distance-error">Distance obligatoire</span>
                 </div>
                 <div class="flex justify-end">
                     <button type="button" id="btn-close-modal"

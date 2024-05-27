@@ -112,8 +112,63 @@ document.getElementById('type-plein')?.addEventListener('change', (event) => {
         nombreLabel.classList.remove('hidden');
     }
 });
+//----Fonction validation champs-------------
+function validerChamps() {
+    let isValid = true;
+    // Récupérer les champs et les messages d'erreur
+    const typeCargaison = document.getElementById('type-cargaison').value;
+    const typePlein = document.getElementById('type-plein').value;
+    const poids_max = document.getElementById('poids-produit').value;
+    const nombre_produits = document.getElementById('nombre-produit').value;
+    const lieu_depart = document.getElementById('depart').value;
+    const lieu_arrivee = document.getElementById('arrivee').value;
+    const distance_km = document.getElementById('distance').value;
+    const typeCargaisonError = document.getElementById('type-cargaison-error');
+    const poidsSuporterError = document.getElementById('poids-cargaison-error');
+    const departError = document.getElementById('depart-error');
+    const arriveeError = document.getElementById('arrivee-error');
+    const distanceError = document.getElementById('distance-error');
+    // Réinitialiser les messages d'erreur
+    typeCargaisonError.classList.remove('hidden');
+    poidsSuporterError.classList.remove('hidden');
+    departError.classList.remove('hidden');
+    arriveeError.classList.remove('hidden');
+    distanceError.classList.remove('hidden');
+    // Validation du type de cargaison
+    if (!typeCargaison) {
+        typeCargaisonError.textContent = 'Veuillez sélectionner un type de cargaison.';
+        isValid = false;
+    }
+    // Validation du poids ou du nombre de produits
+    if (typePlein === 'poids' && (!poids_max || isNaN(parseFloat(poids_max)) || parseFloat(poids_max) <= 0)) {
+        poidsSuporterError.textContent = 'Veuillez entrer un poids valide.';
+        isValid = false;
+    }
+    else if (typePlein === 'nombre' && (!nombre_produits || isNaN(parseInt(nombre_produits)) || parseInt(nombre_produits) <= 0)) {
+        poidsSuporterError.textContent = 'Veuillez entrer un nombre de produits valide.';
+        isValid = false;
+    }
+    // Validation des lieux de départ et d'arrivée
+    if (!lieu_depart) {
+        departError.textContent = 'Veuillez entrer un lieu de départ.';
+        isValid = false;
+    }
+    if (!lieu_arrivee) {
+        arriveeError.textContent = 'Veuillez entrer un lieu d\'arrivée.';
+        isValid = false;
+    }
+    // Validation de la distance
+    if (!distance_km || isNaN(parseFloat(distance_km)) || parseFloat(distance_km) <= 0) {
+        distanceError.textContent = 'Veuillez entrer une distance valide.';
+        isValid = false;
+    }
+    return isValid;
+}
 document.getElementById('form-add-cargaison')?.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (!validerChamps()) {
+        return; // Arrêter la soumission si les champs ne sont pas valides
+    }
     const typeCargaison = document.getElementById('type-cargaison').value;
     const typePlein = document.getElementById('type-plein').value;
     const poids_max = typePlein === 'poids' ? parseFloat(document.getElementById('poids-produit').value) : 0;
