@@ -1,0 +1,26 @@
+{
+    "colis": [
+      {
+        "id": 1,
+        "code": "CL001",
+        "poids": 2000,
+        "etat": "en cours",
+        "id_cargaison": 1
+      },
+      {
+        "id": 2,
+        "code": "CL002",
+        "poids": 3000,
+        "etat": "arrivé",
+        "id_cargaison": 1
+      },
+      {
+        "id": 3,
+        "code": "CL003",
+        "poids": 4000,
+        "etat": "récupéré",
+        "id_cargaison": 2
+      }
+    ]
+  }
+  
